@@ -1,0 +1,11 @@
+@use '../abstracts/mixins';
+
+//example usage of new @use rules
+// mixins.flex-center ==> That mixins is called namespaces
+// you can change namespaces as alias at @use ( '../abstracts/mixins' as m ) for example
+
+main {
+  width: 100%;
+  height: 100vh;
+  @include mixins.flex-center;
+}
