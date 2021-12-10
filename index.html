@@ -22,64 +22,180 @@
         <div class="layout-container">
 
             <div class="sidebar">
-                <nav class="nav">
-                    <a href="#get_started">Get Started</a>
-                    <a href="#what_is_react">What is React</a>
-                    <a href="#installation">Installation</a>
-                    <a href="#basic_concepts">Basic Concepts</a>
-                    <a href="#think_in_react">Think in React</a>
+                <nav class="nav" id="navbar">
+                    <header>
+                        <h2>React Documentation</h2>
+                    </header>
+                    <a class="nav-link" href="#Get_Started">Get Started</a>
+                    <a class="nav-link" href="#Add_React_to_a_Website">Add React to a Website</a>
+                    <a class="nav-link" href="#Add_React_in_One_Minute">Add React in One Minute</a>
+                    <a class="nav-link" href="#Create_a_New_React_App">Create a New React App</a>
+                    <a class="nav-link" href="#Rendering_Elements">Rendering Elements</a>
                 </nav>
             </div>
 
             <div class="section-container">
-                <section class="main-section" id="get_started">
-                    <h2>Get Started</h2>
+                <section class="main-section" id="Get_Started">
+                    <header>
+                        <h2>Get Started</h2>
+                    </header>
+                    <h3>
+                        This page is an overview of the React documentation and related resources.
+                    </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto temporibus placeat sed,
-                        asperiores
-                        harum amet ea aliquam nisi eius tenetur animi, quaerat officia, corrupti officiis ipsum ex
-                        reprehenderit suscipit esse.
+                        React is a JavaScript library for building user interfaces. Learn what React is all about on our
+                        homepage or in the tutorial.
+                    </p>
+                    <h3>Try React</h3>
+                    <p>
+                        React has been designed from the start for gradual adoption, and you can use as little or as
+                        much React as you need. Whether you want to get a taste of React, add some interactivity to a
+                        simple HTML page, or start a complex React-powered app, the links in this section will help you
+                        get started.
                     </p>
                 </section>
-                <section class="main-section" id="what_is_react">
-                    <h2>What is React?</h2>
+                <section class="main-section" id="Add_React_to_a_Website">
+                    <header>
+                        <h2>Add React to a Website</h2>
+                    </header>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti est illo eum unde sequi
-                        officiis
-                        quod reiciendis vero, ullam, itaque, nobis sunt architecto. Quia natus ut molestiae dolor ex
-                        cumque.
+                        React has been designed from the start for gradual adoption, and you can use as little or as
+                        much React as you need. Perhaps you only want to add some “sprinkles of interactivity” to an
+                        existing page. React components are a great way to do that.
+                        <br><br>
+                        The majority of websites aren`t, and don`t need to be, single-page apps. With a few lines of
+                        code and no build tooling, try React in a small part of your website. You can then either
+                        gradually expand its presence, or keep it contained to a few dynamic widgets.
+
+
                     </p>
                 </section>
-                <section class="main-section" id="installation">
-                    <h2>Installation</h2>
+                <section class="main-section" id="Add_React_in_One_Minute">
+                    <header>
+                        <h2>Add React in One Minute</h2>
+                    </header>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis illo, alias possimus impedit
-                        praesentium tempora molestias vel nulla, culpa animi ut tempore reprehenderit labore illum
-                        eveniet
-                        eum qui laborum? Dolor?
+                        In this section, we will show how to add a React component to an existing HTML page. You can
+                        follow along with your own website, or create an empty HTML file to practice.
+                        <br><br>
+                        There will be no complicated tools or install requirements — to complete this section, you only
+                        need an internet connection, and a minute of your time.
+                    </p>
+                    <p><span class="title">Step 1: Add a DOM Container to the HTML</span></p>
+                    <br>
+                    <code>
+                        < !- - ... existing HTML ... -->
+                        <br>
+                        < div id="like_button_container">< /div >
+                        <br>
+                        < !-- ... existing HTML ... -->
+                    </code>
+                    <br>
+                    <p>
+                        We gave this
+                        < div> a unique id HTML attribute. This will allow us to find it from the JavaScript code later
+                            and
+                            display a React component inside of it.
+                    </p>
+
+                    <p><span class="title">Step 2: Add the Script Tags</span></p>
+                    <p>
+                        Next, add three script tags to the HTML page right before the closing body tag :
+
+                        <code>
+                             script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin> / script 
+                             script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin> /script     
+                             <br>
+                             load our React Component
+                             <br>
+                              script src="like_button.js"> /script>
+                        </code>
+                        <br>
+                        The first two tags load React. The third one will load your component code.
+                    </p>
+                    <br>
+                    <p><span class="title">Step 3: Create a React Component</span></p>
+                    <br>
+                    <p>
+                        Create a file called like_button.js next to your HTML page.
+                        <br><br>
+                        Open this <a href="#starter">starter code</a> and paste it into the file you created.
+                        <br><br>
+                        After <a href="#after">the starter code</a>, add two lines to the bottom of like_button.js:
+                        <br>
+                        <code>
+                            //.... the starter code you pasted ....
+                        <br>
+                        const domContainer = document.querySelector('#like_button_container');
+                        <br>ReactDOM.render(e(LikeButton), domContainer);
+                        </code>
+                    </p>
+                    <br>
+                    <p><span class="title">That's it</span></p>
+                    <p>
+                        There is no step four. You have just added the first React component to your website.
                     </p>
                 </section>
-                <section class="main-section" id="basic_concepts">
-                    <h2>Basic Concepts</h2>
+                <section class="main-section" id="Create_a_New_React_App">
+                    <header>
+                        <h2>Create a New React App</h2>
+                    </header>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate vero doloremque rerum fugit
-                        est, similique animi nemo nobis ducimus error aspernatur beatae pariatur aut, voluptates harum
-                        perspiciatis reiciendis totam recusandae.
+                        This page describes a few popular React toolchains which help with tasks like:
+                    <ul>
+                        <li>Scaling to many files and components.</li>
+                        <li>Using third-party libraries from npm.</li>
+                        <li>Detecting common mistakes early.</li>
+                        <li>Live-editing CSS and JS in development.</li>
+                        <li>Optimizing the output for production.</li>
+                    </ul>
+                    <br>
+                    The toolchains recommended on this page don't require configuration to get started.
                     </p>
                 </section>
-                <section class="main-section" id="think_in_react">
-                    <h2>Think in React</h2>
+                <section class="main-section" id="Rendering_Elements">
+                    <header>
+                        <h2>Rendering Elements</h2>
+                    </header>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quis aliquam hic labore perferendis
-                        sequi,
-                        ullam corrupti quia? Cum expedita laudantium quis distinctio eveniet quibusdam, harum culpa
-                        aspernatur minus, facilis doloribus!
+                        An element describes what you want to see on the screen:
+                        <br>
+                        <code>
+                            const element = < h1 Hello, world /h1>;
+                        </code>
+                        <br>
+                        Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React
+                        DOM takes care of updating the DOM to match the React elements.
                     </p>
+                    <p><span class="title">Rendering an Element into the DOM</span></p>
+                    <br>
+                    <p>
+                        Let's say there is a < div> somewhere in your HTML file:
+                            <br>
+                            <code>
+                                < div id="root">< /div >
+                        </code>
+                            We call this a “root” DOM node because everything inside it will be managed by React DOM.
+                            <br><br>
+                            Applications built with just React usually have a single root DOM node. If you are
+                            integrating React into an existing app, you may have as many isolated root DOM nodes as you
+                            like.
+                            <br><br>
+                            To render a React element into a root DOM node, pass both to ReactDOM.render():
+                            <code>
+                            const element = < h1>Hello, world< /h1>;
+                            <br>
+                            ReactDOM.render(element, document.getElementById('root'));
+
+                        </code>
+                    </p>
+
                 </section>
             </div>
         </div>
     </main>
 
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 
 </html>
